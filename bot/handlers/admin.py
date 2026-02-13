@@ -46,20 +46,20 @@ async def _resolve_player(identifier: int, create_if_missing: bool = False) -> O
 async def cmd_admin(message: Message) -> None:
     if not await _ensure_admin(message):
         return
-    text = (
-        "Доступные команды:\n"
-        "/ban <tg_id|internal_id>\n"
-        "/unban <tg_id|internal_id>\n"
-        "/setnick <tg_id|internal_id> <new_nick>\n"
-        "/addformat <name>\n"
-        "/addlimit <name>\n"
-        "/linklimit <format_id> <limit_id>\n"
-        "/segment <format_id> <limit_id>\n"
-        "/assign <tg_id|internal_id> <segment_id>\n"
-        "/unassign <tg_id|internal_id> <segment_id>\n"
-        "/user <tg_id|internal_id>\n"
-        "/segments"
-    )
+text = (
+    "Доступные команды:\n"
+    "/ban tg_id|internal_id\n"
+    "/unban tg_id|internal_id\n"
+    "/setnick tg_id|internal_id new_nick\n"
+    "/addformat name\n"
+    "/addlimit name\n"
+    "/linklimit format_id limit_id\n"
+    "/segment format_id limit_id\n"
+    "/assign tg_id|internal_id segment_id\n"
+    "/unassign tg_id|internal_id segment_id\n"
+    "/user tg_id|internal_id\n"
+    "/segments"
+)
     await message.answer(text, reply_markup=main_menu_kb)
 
 
