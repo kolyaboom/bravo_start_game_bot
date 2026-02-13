@@ -3,11 +3,11 @@ from typing import List
 
 
 # Telegram bot token. Set your real token here or via BOT_TOKEN env var.
-BOT_TOKEN: str = os.getenv("BOT_TOKEN", "PASTE_YOUR_BOT_TOKEN_HERE")
+BOT_TOKEN: str = os.getenv("BOT_TOKEN", "8440785815:AAGiy20RkUsJxqdVtqo4Wzpv7QJQLivcwyc")
 
 # List of Telegram user IDs who are bot admins.
 ADMIN_IDS: List[int] = [
-    # 123456789,
+     6777624915,
 ]
 
 # Deposit/contact link used in broadcast messages.
